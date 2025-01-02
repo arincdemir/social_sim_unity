@@ -140,6 +140,7 @@ namespace SEAN.Scenario.Agents
 
         void SpawnAgents()
         {
+            
             if (current == PedestrianBehavior.SocialSituation.Empty)
             {
                 return;

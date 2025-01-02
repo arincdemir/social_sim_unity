@@ -19,6 +19,12 @@ namespace SEAN.Scenario.Agents
 
         public GameObject agentPrefab;
 
+        public int arincPedCount;
+        public List<GameObject> arincStart;
+        public List<GameObject> arincDest;
+
+        private List<bool> arincMoveTowardsDest = new List<bool>();
+
         private GameObject agentsGO;
 
         public string scenario_name
@@ -31,6 +37,7 @@ namespace SEAN.Scenario.Agents
 
         void Update()
         {
+            /* arinc edit
             foreach (var agent in agents)
             {
                 if (agent.CloseEnough())
@@ -39,6 +46,24 @@ namespace SEAN.Scenario.Agents
                     agent.InitDest(Util.Navmesh.RandomPose().position);
                 }
             }
+            */
+
+            for (int i = 0; i < agents.Count; i++) {
+                var agent = agents[i];
+                if (agent.CloseEnough()) 
+                {
+                    if (arincMoveTowardsDest[i])
+                    {
+                        agent.InitDest(arincStart[i].transform.position);
+                    }
+                    else 
+                    {
+                        agent.InitDest(arincDest[i].transform.position);
+                    }
+                    arincMoveTowardsDest[i] = !arincMoveTowardsDest[i];
+                }
+            }
+            // arinc edit end
         }
 
         public void Restart()
@@ -52,10 +77,21 @@ namespace SEAN.Scenario.Agents
                 }
             }
             Clear();
+
+            //arinc edit
+
+            /*
             for (int i = 0; i < numberOfAgents; i++)
             {
                 SpawnAgent("Agent_" + i, Util.Navmesh.RandomPose());
             }
+            */
+            for (int i = 0; i < arincPedCount; i++){
+                arincMoveTowardsDest.Add(true);
+                Pose pose = new Pose(arincStart[i].transform.position, arincStart[i].transform.rotation);
+                SpawnAgent("Agent_0", pose, arincDest[i].transform.position);
+            }
+            // arinc edit end
         }
 
         void Clear()
@@ -69,7 +105,7 @@ namespace SEAN.Scenario.Agents
             }
         }
 
-        IVI.INavigable SpawnAgent(string name, Pose pose)
+        IVI.INavigable SpawnAgent(string name, Pose pose, Vector3 dest)
         {
             var sfRandom = Instantiate(agentPrefab, Vector3.zero, Quaternion.identity);
             IVI.INavigable agent = sfRandom.GetComponentInChildren<IVI.INavigable>();
@@ -78,9 +114,12 @@ namespace SEAN.Scenario.Agents
             agent.transform.rotation = pose.rotation;
             agent.transform.parent = agentsGO.transform;
             agents.Add(agent);
-            Vector3 pos = Util.Navmesh.RandomPose().position;
+            //arinc edit
+            //Vector3 pos = Util.Navmesh.RandomPose().position;
             //print(name + ": " + pos);
-            agent.InitDest(pos);
+            //agent.InitDest(pos);
+            agent.InitDest(dest);
+            //arinc edit
             return agent;
         }
     }
