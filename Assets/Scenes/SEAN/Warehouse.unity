@@ -2133,6 +2133,27 @@ PrefabInstance:
       propertyPath: m_TagString
       value: TopViewCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 1170914679813255168, guid: f9a56d6eec9bb4d7c8eeb012e8af8a6b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170914679813255168, guid: f9a56d6eec9bb4d7c8eeb012e8af8a6b,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170914679813255168, guid: f9a56d6eec9bb4d7c8eeb012e8af8a6b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 74e4eb9c65aadc8ebb79e523a706e063, type: 2}
+    - target: {fileID: 1170914679813255168, guid: f9a56d6eec9bb4d7c8eeb012e8af8a6b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 642486614980002454, guid: 404f35220ce4d4ef1bbc5da134857749,
+        type: 3}
     - target: {fileID: 1839162284636058573, guid: f9a56d6eec9bb4d7c8eeb012e8af8a6b,
         type: 3}
       propertyPath: m_RootOrder
@@ -2208,6 +2229,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 1474259579}
+    - target: {fileID: 4200863578021192529, guid: f9a56d6eec9bb4d7c8eeb012e8af8a6b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5184593695557817926, guid: f9a56d6eec9bb4d7c8eeb012e8af8a6b,
         type: 3}
       propertyPath: m_IsActive
@@ -2223,11 +2249,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6035345992584556621, guid: f9a56d6eec9bb4d7c8eeb012e8af8a6b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7767270516211267797, guid: f9a56d6eec9bb4d7c8eeb012e8af8a6b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 960208626}
+    - target: {fileID: 7842095005200520816, guid: f9a56d6eec9bb4d7c8eeb012e8af8a6b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9001445750601430126, guid: f9a56d6eec9bb4d7c8eeb012e8af8a6b,
         type: 3}
       propertyPath: m_IsActive
