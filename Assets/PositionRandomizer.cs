@@ -10,6 +10,12 @@ public class PositionRandomizer : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+	    if (!enabled)
+	    {
+		// Exit early if the script is disabled
+		return;
+	    }
+    
         float newX = SampleGaussian(transform.position.x, stdX);
         float newY = 0;
         float newZ =  SampleGaussian(transform.position.z, stdZ);

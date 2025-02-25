@@ -125,6 +125,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: caab046791ae5a5409c32ddb5e361189, type: 2}
+--- !u!1 &59865330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 59865332}
+  - component: {fileID: 59865331}
+  m_Layer: 0
+  m_Name: ArincPedStart (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &59865331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59865330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f194327339f0e81bb767a117e1a8bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stdX: 0.2
+  stdZ: 0.2
+--- !u!4 &59865332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59865330}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 8.95, y: 0, z: -0.77}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!21 &194088709
 Material:
   serializedVersion: 6
@@ -1207,6 +1252,37 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414553945}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f194327339f0e81bb767a117e1a8bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stdX: 0.2
+  stdZ: 0.2
+--- !u!1 &1437739092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1437739094}
+  - component: {fileID: 1437739093}
+  m_Layer: 0
+  m_Name: ArincPedDest (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1437739093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437739092}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87f194327339f0e81bb767a117e1a8bf, type: 3}
@@ -1214,6 +1290,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stdX: 0.2
   stdZ: 0.2
+--- !u!4 &1437739094
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437739092}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 19.05, y: 0, z: -1.01}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!21 &1474259579
 Material:
   serializedVersion: 6
@@ -1433,8 +1523,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f194327339f0e81bb767a117e1a8bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stdX: 0.6
-  stdZ: 0.6
+  stdX: 0.2
+  stdZ: 0.2
 --- !u!4 &1895934424
 Transform:
   m_ObjectHideFlags: 0
@@ -1443,7 +1533,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895934422}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 8.14, y: 0, z: 0.33}
+  m_LocalPosition: {x: 6.93, y: 0, z: 0.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1487,6 +1577,37 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899078284}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f194327339f0e81bb767a117e1a8bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stdX: 0.2
+  stdZ: 0.2
+--- !u!1 &1942299569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1942299571}
+  - component: {fileID: 1942299570}
+  m_Layer: 0
+  m_Name: ArincPedStart (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1942299570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942299569}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87f194327339f0e81bb767a117e1a8bf, type: 3}
@@ -1494,6 +1615,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stdX: 0.2
   stdZ: 0.2
+--- !u!4 &1942299571
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942299569}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 10.07, y: 0, z: -2.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &2053103994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2053103996}
+  - component: {fileID: 2053103995}
+  m_Layer: 0
+  m_Name: ArincPedDest (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2053103995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053103994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f194327339f0e81bb767a117e1a8bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stdX: 0.2
+  stdZ: 0.2
+--- !u!4 &2053103996
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053103994}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.19, y: 0, z: -3.09}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2136448928
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,8 +1703,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f194327339f0e81bb767a117e1a8bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stdX: 0.6
-  stdZ: 0.6
+  stdX: 0.2
+  stdZ: 0.2
 --- !u!4 &2136448930
 Transform:
   m_ObjectHideFlags: 0
@@ -1532,13 +1712,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136448928}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.22, y: 0, z: 0.33}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 19.01, y: 0, z: 0.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &1509926194663680975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1812,12 +1992,12 @@ PrefabInstance:
     - target: {fileID: 5445703329829454170, guid: a4473890e6bff4d398c2d582451abdc5,
         type: 3}
       propertyPath: arincPedCount
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5445703329829454170, guid: a4473890e6bff4d398c2d582451abdc5,
         type: 3}
       propertyPath: arincDest.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5445703329829454170, guid: a4473890e6bff4d398c2d582451abdc5,
         type: 3}
@@ -1832,7 +2012,7 @@ PrefabInstance:
     - target: {fileID: 5445703329829454170, guid: a4473890e6bff4d398c2d582451abdc5,
         type: 3}
       propertyPath: arincStart.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5445703329829454170, guid: a4473890e6bff4d398c2d582451abdc5,
         type: 3}
@@ -1843,7 +2023,12 @@ PrefabInstance:
         type: 3}
       propertyPath: arincDest.Array.data[1]
       value: 
-      objectReference: {fileID: 2136448928}
+      objectReference: {fileID: 1437739092}
+    - target: {fileID: 5445703329829454170, guid: a4473890e6bff4d398c2d582451abdc5,
+        type: 3}
+      propertyPath: arincDest.Array.data[2]
+      value: 
+      objectReference: {fileID: 2053103994}
     - target: {fileID: 5445703329829454170, guid: a4473890e6bff4d398c2d582451abdc5,
         type: 3}
       propertyPath: arincStart.Array.data[0]
@@ -1853,7 +2038,12 @@ PrefabInstance:
         type: 3}
       propertyPath: arincStart.Array.data[1]
       value: 
-      objectReference: {fileID: 1895934422}
+      objectReference: {fileID: 59865330}
+    - target: {fileID: 5445703329829454170, guid: a4473890e6bff4d398c2d582451abdc5,
+        type: 3}
+      propertyPath: arincStart.Array.data[2]
+      value: 
+      objectReference: {fileID: 1942299569}
     - target: {fileID: 5445703329829454171, guid: a4473890e6bff4d398c2d582451abdc5,
         type: 3}
       propertyPath: m_RootOrder

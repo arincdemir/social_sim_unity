@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 5846076526241706877}
   - component: {fileID: 1034930860331759892}
   - component: {fileID: -7747515698197457689}
+  - component: {fileID: -4401835733520213312}
+  - component: {fileID: 6123607105857684937}
+  - component: {fileID: -8027618765099898697}
   m_Layer: 0
   m_Name: ROSConnectionPrefab
   m_TagString: Untagged
@@ -78,6 +81,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &-7747515698197457689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796711973914837114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e22dfed9de9543ce99aa7e1ab505588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4401835733520213312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796711973914837114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e22dfed9de9543ce99aa7e1ab505588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6123607105857684937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796711973914837114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e22dfed9de9543ce99aa7e1ab505588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8027618765099898697
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
