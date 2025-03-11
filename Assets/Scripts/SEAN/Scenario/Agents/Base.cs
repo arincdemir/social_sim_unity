@@ -1,7 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace SEAN.Scenario.Agents
 {
@@ -65,11 +70,24 @@ namespace SEAN.Scenario.Agents
             base.Start();
         }
 
+        private List<Vector3> locationHistory = new List<Vector3>();
+        private float locationHistoryTimer = 0f;
+        
         void Update()
         {
             velocity = UpdateVelocity();
             //print(name + " velocity: " + velocity);
+
+            // Arinc edit
+            locationHistoryTimer += Time.deltaTime;
+            if (locationHistoryTimer >= 1f)
+            {
+                locationHistory.Add(transform.position);
+                locationHistoryTimer = 0f;
+            }
+
             Move();
+
 
             //if (path.Count > 1 && Util.Geometry.GroundPlaneDist(transform.position, path[0]) < Parameters.MIN_DIST)
             //{
@@ -258,8 +276,61 @@ namespace SEAN.Scenario.Agents
             }
             //Debug.DrawLine(transform.position, destPos);
             //Gizmos.DrawCube(destPos, new Vector3(0.25f, 0.25f, 0.25f));
+
+
+            
             base.OnDrawGizmosSelected();
         }
+
+
+        // Arinc edit
+        // I added these
+        protected void OnDrawGizmos()
+        {
+            // Draw red spheres at every 10th point in the location history
+            if (locationHistory != null && locationHistory.Count > 0)
+            {
+                Gizmos.color = Color.red;
+                for (int i = 0; i < locationHistory.Count; i += 1)
+                {
+                    Gizmos.DrawSphere(locationHistory[i], 0.07f); // Adjust sphere radius as needed
+                }
+            }
+
+        #if UNITY_EDITOR
+            // Draw the planned future trajectory using Handles for thicker lines
+            if (nmPath != null && nmPath.corners != null && nmPath.corners.Length > 0)
+            {
+                Handles.color = Color.magenta;
+                // Set the line thickness (in pixels)
+                float thickness = 5.0f;
+                // Draw a polyline through the corners with the specified thickness
+                Handles.DrawAAPolyLine(thickness, nmPath.corners);
+
+                // Optionally, draw spheres at each corner
+                foreach (Vector3 corner in nmPath.corners)
+                {
+                    Handles.SphereHandleCap(0, corner, Quaternion.identity, 0.1f, EventType.Repaint);
+                }
+            }
+        #else
+            // Fallback using Gizmos (fixed thin lines)
+            if (nmPath != null && nmPath.corners != null && nmPath.corners.Length > 0)
+            {
+                Gizmos.color = Color.magenta;
+                Vector3 prevCorner = nmPath.corners[0];
+                Gizmos.DrawSphere(prevCorner, 0.10f);
+                for (int j = 1; j < nmPath.corners.Length; j++)
+                {
+                    Vector3 currentCorner = nmPath.corners[j];
+                    Gizmos.DrawLine(prevCorner, currentCorner);
+                    Gizmos.DrawSphere(currentCorner, 0.1f);
+                    prevCorner = currentCorner;
+                }
+            }
+        #endif
+        }
+
         #endregion
     }
 }

@@ -4,6 +4,7 @@
 // This source code is licensed under the BSD-style license found in the
 // LICENSE file in the root directory of this source tree. 
 
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace SEAN.Scenario
@@ -67,6 +68,34 @@ namespace SEAN.Scenario
         public override string ToString()
         {
             return gameObject.name;
+        }
+
+        private List<Vector3> locationHistory = new List<Vector3>();
+        private float locationHistoryTimer = 0f;
+        public void Update() {
+            // Arinc edit: add position every 1 second
+            locationHistoryTimer += Time.deltaTime;
+            if (locationHistoryTimer >= 1f)
+            {
+                locationHistory.Add(transform.position);
+                locationHistoryTimer = 0f;
+                Debug.Log("Added position to history");
+            }
+        }
+
+        // Arinc edit
+        // I added these
+        protected void OnDrawGizmos()
+        {
+            // Draw red spheres at every 10th point in the location history
+            if (locationHistory != null && locationHistory.Count > 0)
+            {
+                Gizmos.color = Color.green;
+                for (int i = 0; i < locationHistory.Count; i += 1)
+                {
+                    Gizmos.DrawSphere(locationHistory[i], 0.07f); // Adjust sphere radius as needed
+                }
+            }
         }
     }
 }

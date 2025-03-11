@@ -164,7 +164,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59865330}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 8.95, y: 0, z: -0.77}
+  m_LocalPosition: {x: 7.78, y: 0, z: -2.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1298,7 +1298,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437739092}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 19.05, y: 0, z: -1.01}
+  m_LocalPosition: {x: 19.05, y: 0, z: -1.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1533,7 +1533,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895934422}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 6.93, y: 0, z: 0.99}
+  m_LocalPosition: {x: 8.01, y: 0, z: 0.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1786,6 +1786,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4017127170121239760, guid: 0303bdb201b5e44c5ad3c7bf43ff670e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5879276685121536947, guid: 0303bdb201b5e44c5ad3c7bf43ff670e,
         type: 3}
       propertyPath: m_IsActive
@@ -1806,6 +1811,11 @@ PrefabInstance:
       propertyPath: RobotStartLocation
       value: 
       objectReference: {fileID: 1899078284}
+    - target: {fileID: 7047530609701712606, guid: 0303bdb201b5e44c5ad3c7bf43ff670e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7420183679246820486, guid: 0303bdb201b5e44c5ad3c7bf43ff670e,
         type: 3}
       propertyPath: m_IsActive
@@ -1992,7 +2002,7 @@ PrefabInstance:
     - target: {fileID: 5445703329829454170, guid: a4473890e6bff4d398c2d582451abdc5,
         type: 3}
       propertyPath: arincPedCount
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5445703329829454170, guid: a4473890e6bff4d398c2d582451abdc5,
         type: 3}
@@ -2136,6 +2146,11 @@ PrefabInstance:
     - target: {fileID: 1170914679813255168, guid: f9a56d6eec9bb4d7c8eeb012e8af8a6b,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170914679813255168, guid: f9a56d6eec9bb4d7c8eeb012e8af8a6b,
+        type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1170914679813255168, guid: f9a56d6eec9bb4d7c8eeb012e8af8a6b,
