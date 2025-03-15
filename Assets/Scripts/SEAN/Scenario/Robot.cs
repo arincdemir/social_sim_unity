@@ -85,6 +85,7 @@ namespace SEAN.Scenario
 
         // Arinc edit
         // I added these
+        /*
         protected void OnDrawGizmos()
         {
             // Draw red spheres at every 10th point in the location history
@@ -97,5 +98,6 @@ namespace SEAN.Scenario
                 }
             }
         }
+        */
     }
 }

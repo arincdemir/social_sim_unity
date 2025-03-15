@@ -1,4 +1,4 @@
-﻿﻿// Copyright (c) 2021, Members of Yale Interactive Machines Group, Yale University,
+// Copyright (c) 2021, Members of Yale Interactive Machines Group, Yale University,
 // Nathan Tsoi
 // All rights reserved.
 // This source code is licensed under the BSD-style license found in the
@@ -8,9 +8,9 @@ using UnityEngine;
 
 namespace SEAN.Scenario.PedestrianBehavior
 {
-    public class Random : Base
+    public class HandPlaced : Base
     {
-        Agents.RandomABNavAgentManager agentManager;
+        Agents.HandPlacedAgentManager agentManager;
         GameObject random;
 
         public override string scenario_name
@@ -26,7 +26,7 @@ namespace SEAN.Scenario.PedestrianBehavior
             base.Start();
             foreach (Transform transform in pedestrianControl.transform)
             {
-                if (transform.name == "Random")
+                if (transform.name == "HandPlaced")
                 {
                     random = transform.gameObject;
                     break;
@@ -34,10 +34,10 @@ namespace SEAN.Scenario.PedestrianBehavior
             }
             if (random == null)
             {
-                throw new System.Exception("Could not find random game object in pedestrian controllers");
+                throw new System.Exception("Could not find handplaced game object in pedestrian controllers");
             }
             random.SetActive(true);
-            agentManager = (Agents.RandomABNavAgentManager)Agents.BaseAgentManager.instance;
+            agentManager = (Agents.HandPlacedAgentManager)Agents.BaseAgentManager.instance;
             agentManager.Restart();
         }
 
