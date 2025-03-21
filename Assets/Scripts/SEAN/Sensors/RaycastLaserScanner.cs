@@ -93,8 +93,21 @@ namespace SEAN.Sensors
 
                 raycastHits[i] = new RaycastHit();
                 if (Physics.Raycast(rays[i], out raycastHits[i], range_max))
+                {
                     if (raycastHits[i].distance >= range_min && raycastHits[i].distance <= range_max)
+                    {
                         ranges[i] = raycastHits[i].distance;
+                    }
+                    else
+                    {
+                        ranges[i] = Mathf.Infinity; // No valid hit
+                    }
+                }
+                else
+                {
+                    ranges[i] = Mathf.Infinity; // No hit at all
+                }
+                    
             }
         }
     }
